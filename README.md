@@ -28,6 +28,15 @@ This Web3 personal portfolio is divided into three main sections:
 
 ---
 
+## 👤 About Myself
+
+I have just **five years** to dive deep into the world of technology — and I’m committed to making every moment count. With a passion that fuels both learning and creating, I dedicate myself fully to this journey.  
+
+From now on, I want every piece of work I produce — whether it's a project, a design, or a blog post — to be **thoughtfully crafted**, **visually compelling**, and a true reflection of my growth and dedication in tech.
+
+> *"It’s not just about building, it’s about creating something meaningful, beautiful, and lasting."*
+
+---
 ## 🛠️ Tech Stack
 
 | Layer           | Technologies                          |

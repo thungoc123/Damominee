@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://your-logo-url.com/logo.png" alt="Web3 Portfolio Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/thungoc123/Damominee/refs/heads/main/Frontend/my-next-app/public/logo.png" alt="Web3 Portfolio Logo" width="200"/>
 </p>
 
 <h1 align="center">🌐 Web3 Portfolio – Fullstack with Next.js & Solidity</h1>
 
 <p align="center">
-  <b>Nơi kết nối dự án cá nhân, ấn phẩm nghệ thuật và chia sẻ công nghệ</b>
+  <b>A modern personal platform for showcasing projects, creative works, and sharing tech insights</b>
 </p>
 
 <p align="center">
@@ -18,30 +18,32 @@
 
 ---
 
-## ✨ Giới thiệu
+## ✨ Introduction
 
-Portfolio Web3 cá nhân được chia thành 3 khu vực chính:
+This Web3 personal portfolio is divided into three main sections:
 
-- 👔 **Doanh nghiệp**: Xem dự án, quy trình làm việc, kỹ năng
-- 💖 **Fan hâm mộ**: Truy cập ấn phẩm sáng tạo (design, media, sản phẩm cá nhân)
-- 📚 **Blog công nghệ**: Chia sẻ kiến thức từ cơ bản đến nâng cao, cập nhật xu hướng công nghệ mới
-
----
-
-## 🛠️ Công nghệ sử dụng
-
-| Layer          | Công nghệ                         |
-|----------------|-----------------------------------|
-| 🧠 Backend      | Node.js, Express.js               |
-| 🌍 Frontend     | Next.js (Fullstack + SSR/SSG)     |
-| 🔐 Smart Contract | Solidity, Hardhat, Ethers.js      |
-| 🧪 UI Styling   | TailwindCSS, shadcn/ui            |
-| 🧠 State        | Zustand                           |
-| 🕸️ Web3         | MetaMask, WalletConnect, Ethers   |
+- 👔 **For Businesses**: Explore my featured projects, development process, and technical skills.
+- 💖 **For Fans**: A showcase of creative works (UI/UX, digital art, side products).
+- 📚 **Tech Blog**: Curated knowledge from beginner to advanced, latest tech trends, and selected articles that expand perspective.
 
 ---
 
-## 📦 Cài đặt local
+## 🛠️ Tech Stack
+
+| Layer           | Technologies                          |
+|------------------|---------------------------------------|
+| 🧠 Backend        | Node.js, Express.js                   |
+| 🌍 Frontend       | Next.js (Fullstack + SSR/SSG)         |
+| 🔐 Smart Contract | Solidity, Hardhat, Ethers.js          |
+| 🎨 UI Styling     | TailwindCSS, shadcn/ui                |
+| 🧠 State          | Zustand                               |
+| 🌐 Web3           | MetaMask, WalletConnect, Ethers.js    |
+
+---
+
+## 📦 Local Setup
+
+Clone the repository and install dependencies to run the project locally.
 
 ```bash
 git clone https://github.com/your-username/your-portfolio.git

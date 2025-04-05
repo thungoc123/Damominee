@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link'
+import GradientBackground from "@/components/GradientBackground";
+import FooterBackground from "@/components/Footer";
+import Header from "@/components/Header";
 
 
 
@@ -22,33 +25,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${JetBrainsMono.variable} ${JetBrainsMono.variable} antialiased`}>
-        <div>
-          <header className="p-4 bg-gray-800 text-white">
-            <nav>
-              <ul className="flex space-x-4">
-                <li><Link href="/hello">Contact</Link></li>
-                <li><Link href="/about-me">About Me</Link></li>
-                <li><Link href="/projects">Projects</Link></li>
-              </ul>
-            </nav>
-          </header>
-
-          <main>{children}</main>
-
-          <footer className="mt-10 flex from-gray-900 to-blue-900 justify-between border-t border-gray-700 pt-4">
-        <div className="text-green-400">find me in:</div>
-        <div className="text-green-400">@daveinthahood</div>
-      </footer>
+      <body>
+        <div className="relative min-h-screen bg-[#0d1117] overflow-hidden">
+          <GradientBackground />
+          <Header />
+          {/* Nội dung chính */}
+          <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-110px)] px-4">
+            {/* khoảng trống đã trừ header/footer */}
+            <div className="max-w-3xl w-full">{children}</div>
+          </main>
+          <FooterBackground />
         </div>
       </body>
     </html>
-    // <html lang="en">
-    //   <body
-    //     className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-    //   >
-    //     {children}
-    //   </body>
-    // </html>
+
   );
 }

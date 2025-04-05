@@ -7,8 +7,6 @@ export default function Hello() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white p-10 font-mono">
       {/* Navbar */}
-    
-
       {/* Content */}
       <main className="mt-10">
         <h2 className="text-3xl font-bold">Hi all. I am</h2>

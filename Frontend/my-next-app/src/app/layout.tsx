@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={JetBrainsMono.variable}>
       <body>
         <div className="relative min-h-screen bg-[#0d1117] overflow-hidden">
           <GradientBackground />

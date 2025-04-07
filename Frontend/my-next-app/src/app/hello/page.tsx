@@ -2,12 +2,9 @@
 import { useState } from "react";
 
 export default function Hello() {
-  const [activeTab, setActiveTab] = useState("hello");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white p-10 font-mono">
-      {/* Navbar */}
-      {/* Content */}
+  
       <main className="mt-10">
         <h2 className="text-3xl font-bold">Hi all. I am</h2>
         <h1 className="text-5xl font-extrabold text-white mt-2">Davide Simone</h1>
@@ -27,8 +24,6 @@ const linkedinPage = "https://www.linkedin.com/in/davide-simone-a2823619a/";`}
         </pre>
       </main>
 
-      {/* Footer */}
-    
-    </div>
+   
   );
 }

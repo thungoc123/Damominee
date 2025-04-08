@@ -5,7 +5,7 @@ export default function Hello() {
 
   return (
 
-    <main className="mt-10 bg-none">
+    <main className="mt-10 m-auto w-[80%] bg-none">
       <h2 className="text-sm text-white">Hi all. I am</h2>
       <h1 className="text-5xl font-bold text-white mt-2 tracking-widest">Damominee</h1>
       <p className="text-xl text-blue-400">&gt; Front-end developer</p>

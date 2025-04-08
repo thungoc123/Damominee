@@ -30,9 +30,9 @@ export default function RootLayout({
           <GradientBackground />
           <Header />
           {/* Nội dung chính */}
-          <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-110px)] px-4">
+          <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-110px)]">
             {/* khoảng trống đã trừ header/footer */}
-            <div className="max-w-3xl w-full">{children}</div>
+            <div className="w-full h-full">{children}</div>
           </main>
           <FooterBackground />
         </div>

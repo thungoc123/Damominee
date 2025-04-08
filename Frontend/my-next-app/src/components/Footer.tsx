@@ -1,3 +1,5 @@
+import { FaGithub } from 'react-icons/fa';
+
 export default function FooterBackground() {
      return (
 
@@ -7,7 +9,12 @@ export default function FooterBackground() {
          <a href="#"><i className="fab fa-twitter text-teal-400" /></a>
          <a href="#"><i className="fab fa-facebook text-teal-400" /></a>
        </div>
-       <a href="https://github.com/daveinthahood" className="text-green-400">@Damominee </a>
+       <div className="flex items-center space-x-3">
+       <a href="https://github.com/thungoc123" className="text-green-400">@Damominee </a>
+       <FaGithub  className="text-xl text-green-400"/>
+       </div>
+      
+
      </footer>
    
      )

@@ -7,7 +7,7 @@ export default function FooterBackground() {
          <a href="#"><i className="fab fa-twitter text-teal-400" /></a>
          <a href="#"><i className="fab fa-facebook text-teal-400" /></a>
        </div>
-       <a href="https://github.com/daveinthahood" className="text-green-400">@daveinthahood</a>
+       <a href="https://github.com/daveinthahood" className="text-green-400">@Damominee </a>
      </footer>
    
      )

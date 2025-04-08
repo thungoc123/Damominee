@@ -85,7 +85,8 @@ From now on, I want every piece of work I produce — whether it's a project, a 
 ## 7. Scalability and Security:
 - [ ] **Ensure secure code handling for Web3 transactions**.
 - [ ] **Test and apply security patches** as needed.
-
+## 8. Other ideas:
+- [ ] **Book i read**.
 ---
 ## 📦 Local Setup
 

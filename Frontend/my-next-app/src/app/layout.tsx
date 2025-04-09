@@ -32,7 +32,7 @@ export default function RootLayout({
           {/* Nội dung chính */}
           <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-110px)]">
             {/* khoảng trống đã trừ header/footer */}
-            <div className="w-full h-full">{children}</div>
+            <div className="w-full">{children}</div>
           </main>
           <FooterBackground />
         </div>

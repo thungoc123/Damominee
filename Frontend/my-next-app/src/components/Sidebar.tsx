@@ -3,22 +3,19 @@ import { Mail, Phone, Folder, FileText, User, GraduationCap } from "lucide-react
 import { useState } from "react";
 import { FaFolder, FaPhoneAlt  } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import SidebarLink from "./SidebarLink";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-gray-950 border-r border-gray-700 flex flex-col justify-between p-4">
+    <div className="bg-gray-800 border-r border-gray-700 flex flex-col justify-between p-4">
      
       <div>
         <div className="mb-6">
           <ul className="ml-4 mt-1 space-y-1">
-            <li className="flex items-center text-white">
-              <FaFolder className="w-4 h-4 mr-2 text-orange-400" /> bio
-            </li>
-            <li className="flex items-center text-gray-700">
-              <FaFolder className="w-4 h-4 mr-2 text-green-700" /> interests
-            </li>
+          <SidebarLink href="/about" icon={FaFolder} label="bio" iconColor="text-orange-400" />
+          <SidebarLink href="/about/interest" icon={FaFolder} label="interests" iconColor="text-green-700" />
             <li>
             <ul>
       <li

@@ -15,32 +15,32 @@ export default function SkillsSection() {
     { name: "React", icon: FaReact },
     { name: "Java", icon: FaJava },
     { name: "React Native", icon: TbBrandReactNative },
-    { name: "Flutter", icon: FaFlutter },
+    // { name: "Flutter", icon: FaFlutter },
     { name: "TypeScript", icon: SiTypescript },
     { name: "Node", icon: FaNodeJs },
-    { name: "SASS", icon: FaSass },
-    { name: "Vue", icon: FaVuejs },
+    // { name: "SASS", icon: FaSass },
+    // { name: "Vue", icon: FaVuejs },
     { name: ".Net", icon: SiDotnet },
     { name: "Next.js", icon: RiNextjsFill },
     { name: "C#", icon: TbBrandCSharp },
-    { name: "MySQL", icon: SiMysql },
-    { name: "Django", icon: SiDjango },
-    { name: "PHP", icon: SiPhp },
-    { name: "DynamoDB", icon: SiAmazondynamodb },
-    { name: "Python", icon: FaPython },
-    { name: "Express.Js", icon: SiExpress },
+    // { name: "MySQL", icon: SiMysql },
+    // { name: "Django", icon: SiDjango },
+    // { name: "PHP", icon: SiPhp },
+    // { name: "DynamoDB", icon: SiAmazondynamodb },
+    // { name: "Python", icon: FaPython },
+    // { name: "Express.Js", icon: SiExpress },
     { name: "WordPress", icon: FaWordpress },
-    { name: "REST API" },
-    { name: "Laravel", icon: FaLaravel },
+    // { name: "REST API" },
+    // { name: "Laravel", icon: FaLaravel },
     { name: "Tailwind", icon: SiTailwindcss },
     { name: "Bootstrap", icon: FaBootstrap },
-    { name: "Git", icon: FaGithub },
   ];
 
   const tools = [
     { name: "Windows", checked: true },
-    { name: "MacOS" },
-    { name: "Linux" },
+    // { name: "MacOS" },
+    // { name: "Linux" },
+    { name: "Git", checked: true },
     { name: "Photoshop", checked: true },
     { name: "Jira", checked: true },
     { name: "Figma", checked: true },
@@ -48,11 +48,11 @@ export default function SkillsSection() {
   ];
 
   return (
-    <div className="w-full md:w-1/2 p-6 flex bg-gray-700 flex-col gap-6">
+    <div className="w-full md:w-1/2 p-6 flex bg-gray-800 flex-col gap-6">
       <section>
-        <h2 className="text-sm text-gray-300 mb-2">// Programming languages</h2>
+        <h2 className="text-sm text-gray-500 mb-2">// Programming languages i have learnt or i am learning</h2>
         <UserInfo />
-        <div className="grid grid-cols-3 bg-gray-800 gap-4 p-4 rounded-lg">
+        <div className="grid grid-cols-3 bg-gray-900 gap-4 p-4 rounded-lg">
           {devSkills.map(({ name, icon: Icon }, index) => (
             <SkillItem key={index} name={name} checked icon={Icon} />
           ))}
@@ -60,10 +60,9 @@ export default function SkillsSection() {
       </section>
 
       <section>
-        <h2 className="text-sm text-gray-300 mb-2">// Operating Systems & Tools</h2>
+        <h2 className="text-sm text-gray-500 mb-2">// Operating Systems & Tools</h2>
         <UserInfo />
-
-        <div className="grid grid-cols-3 gap-4 p-4 rounded-lg">
+        <div className="grid grid-cols-3 bg-gray-900 gap-4 p-4 rounded-lg">
           {tools.map(({ name, checked }, index) => (
             <SkillItem key={index} name={name} checked={checked} />
           ))}
@@ -88,7 +87,7 @@ function SkillItem({
         type="checkbox"
         checked={checked}
         readOnly
-        className="form-checkbox text-blue-400"
+        className="form-checkbox accent-gray-500 w-4 h-4"
       />
       {Icon && <Icon className="text-gray-500" />}
       <label className="text-gray-300">{name}</label>

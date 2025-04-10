@@ -4,10 +4,10 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
-
+  const basePath = "/" + pathname.split("/")[1]; 
   const getLinkClass = (path: string) =>
     `p-4 px-5 border-l border-r border-white/10 ${
-      pathname === path
+      basePath === path
         ? "text-white border-b-2 border-b-orange-400"
         : "text-white/60 hover:text-gray-300"
     }`;

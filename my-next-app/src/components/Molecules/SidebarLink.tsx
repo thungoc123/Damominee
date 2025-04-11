@@ -20,7 +20,7 @@ export default function SidebarLink({
       <Icon className={`w-4 h-4 mr-2 ${iconColor}`} />
       <Link
         href={href}
-        className={`${isActive ? "text-white" : "text-gray-700"} hover:${iconColor}`}
+        className={`${isActive ? "text-white" : "text-gray-500"} hover:${iconColor}`}
       >
         {label}
       </Link>

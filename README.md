@@ -25,7 +25,7 @@ This Web3 personal portfolio is divided into three main sections:
 - 👔 **For Businesses**: Explore my featured projects, development process, and technical skills.
 - 💖 **For Fans**: A showcase of creative works (UI/UX, digital art, side products).
 - 📚 **Tech Blog**: Curated knowledge from beginner to advanced, latest tech trends, and selected articles that expand perspective.
-
+- 🙋‍♂️ **For Customers**: Get to know me better — who I am, what I can build, and how I can turn your ideas into real, user-friendly digital experiences.
 ---
 
 ## 👤 About Myself

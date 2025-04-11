@@ -2,7 +2,6 @@ import Breadcrumb from "@/components/Atoms/Breadcrumb";
 import Sidebar from "@/components/Layout/Sidebar";
 import ListProjects from "@/components/Templates/ListProjects";
 
-
 export default function Projects() {
      return (
           <div className="w-full flex flex-col md:flex-row bg-none text-gray-200">

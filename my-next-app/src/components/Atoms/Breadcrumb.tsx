@@ -1,6 +1,5 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function Breadcrumb() {
        const pathname = usePathname();

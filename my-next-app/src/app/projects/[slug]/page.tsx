@@ -1,11 +1,8 @@
 "use client";
 import ProjectDocument from '@/components/Organisms/ProjectDocument';
 import ProjectShowcase from '@/components/Organisms/ProjectShowcase';
-import { useParams } from 'next/navigation';
 
 export default function ProjectPage() {
-     const params = useParams();
-     const slug = params.slug;
 
      return (
           <div className="w-screen min-h-[calc(94vh-100px)] flex overflow-hidden bg-gray-800">

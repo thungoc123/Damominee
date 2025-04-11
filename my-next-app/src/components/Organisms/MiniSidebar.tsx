@@ -1,4 +1,4 @@
-import { FaRegFileCode, FaUser, FaDiscord } from "react-icons/fa";
+import { FaUser, FaDiscord } from "react-icons/fa";
 import { BsTerminalFill } from "react-icons/bs";
 
 export default function MiniSidebar() {

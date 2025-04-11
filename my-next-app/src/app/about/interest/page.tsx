@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Atoms/Breadcrumb";
-import CodeSection from "@/components/Organisms/CodeSelection";
 import CodeEditorUI from "@/components/Organisms/CodeUI";
 import InterestSection from "@/components/Organisms/InterestSection";
 import MiniSidebar from "@/components/Organisms/MiniSidebar";
@@ -22,8 +21,8 @@ export default function Interest() {
                               </div>
                               <div className="w-full md:w-1/2 p-6 flex bg-gray-800 flex-col gap-6">
                                    <section>
-                                        <h2 className="text-sm text-gray-500 mb-2">// Showing my passion</h2>
-                                        <UserInfo />
+                                   <h2 className="text-sm text-gray-500 mb-2">{`// Showing my passion`}</h2>
+                                   <UserInfo />
                                         <CodeEditorUI />
                                    </section>
                               </div>

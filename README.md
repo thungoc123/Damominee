@@ -64,7 +64,7 @@ From now on, I want every piece of work I produce — whether it's a project, a 
 ## 3. Frontend Development with Next.js:
 - [ ] **Create pages for "For Businesses", "For Fans", "Tech Blog"**.
 - [ ] **Optimize SEO for the pages**.
-- [ ] **Develop UI components** (e.g., sign-up buttons, contact forms, blog post listings, project showcases).
+- [x] **Develop UI components** (e.g., sign-up buttons, contact forms, blog post listings, project showcases).
 - [ ] **Integrate Web3 functionalities** (e.g., MetaMask login, smart contract interactions).
 
 ## 4. Blog Integration:
@@ -86,7 +86,7 @@ From now on, I want every piece of work I produce — whether it's a project, a 
 - [ ] **Ensure secure code handling for Web3 transactions**.
 - [ ] **Test and apply security patches** as needed.
 ## 8. Other ideas:
-- [ ] **Book i read**.
+- [ ] **Book i read**. -- Oh Shit, i forgot 1:26 am 12.4.2025
 ---
 ## 📦 Local Setup
 

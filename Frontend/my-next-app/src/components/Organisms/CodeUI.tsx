@@ -1,23 +1,22 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 
 export default function CodeEditorUI() {
   return (
-    <div className="flex h-[500px] bg-gray-900">
-      <div className="w-full max-w-2xl h-full bg-[#1e2227] rounded-lg shadow-xl border border-gray-800">
-        {/* Editor top bar with dots */}
+    <div className="flex h-[500px] bg-gray-900 rounded-lg shadow-xl border border-gray-800">
+      <div className="w-full max-w-2xl h-full bg-[#1e2227]">
+        {/* Editor top bar with dots */}  
         <div className="h-8 bg-[#1e2227] flex items-center px-3 border-b border-gray-800">
-          <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div>
+          <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
+          <div className="w-2 h-2 rounded-full bg-green-500"></div>
         </div>
         
         {/* Code content */}
         <div className="font-mono text-sm" style={{ backgroundColor: '#1e2227' }}>
           <div className="flex">
-            <div className="leading-none text-[10px] text-gray-500  w-6 mr-2 text-right select-none">1</div>
-            <div className='text-[10px] leading-none'>
+            <div className="leading-1 text-[10px] text-gray-500  w-6 mr-2 text-right select-none">1</div>
+            <div className='text-[10px] leading-1'>
               <span className="text-pink-400">const</span>
               <span className="text-blue-300"> $table</span>
               <span className="text-white"> = </span>
@@ -31,7 +30,7 @@ export default function CodeEditorUI() {
           </div>
           
           <div className="flex">
-            <div className="leading-none text-[10px] text-gray-500 w-6 mr-2 text-right select-none text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px]">2</div>
+            <div className="leading-1 text-[10px] text-gray-500 w-6 mr-2 text-right select-none text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px] text-[10px]">2</div>
             <div></div>
           </div>
           

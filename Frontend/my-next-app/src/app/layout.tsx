@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Link from 'next/link'
-import GradientBackground from "@/components/GradientBackground";
-import FooterBackground from "@/components/Footer";
-import Header from "@/components/Header";
+import GradientBackground from "@/components/Templates/GradientBackground";
+import FooterBackground from "@/components/Layout/Footer";
+import Header from "@/components/Layout/Header";
 
 
 
@@ -26,13 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={JetBrainsMono.variable}>
       <body>
-        <div className="relative min-h-screen bg-[#0d1117] overflow-hidden">
+        <div className="relative flex flex-col min-h-screen bg-[#0d1117] overflow-hidden">
           <GradientBackground />
           <Header />
           {/* Nội dung chính */}
-          <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-110px)]">
-            {/* khoảng trống đã trừ header/footer */}
-            <div className="w-full">{children}</div>
+          <main className="relative z-10 flex-1 flex flex-col w-full">
+            <div className="flex-1 w-full h-screen">{children}</div>
           </main>
           <FooterBackground />
         </div>

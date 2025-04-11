@@ -1,8 +1,8 @@
-import Breadcrumb from "@/components/Breadcrumb";
-import CodeSection from "@/components/CodeSelection";
-import MiniSidebar from "@/components/MiniSidebar";
-import Sidebar from "@/components/Sidebar";
-import SkillsSection from "@/components/SkillSelection";
+import Breadcrumb from "@/components/Atoms/Breadcrumb";
+import Sidebar from "@/components/Layout/Sidebar";
+import SkillsSection from "@/components/Molecules/SkillSelection";
+import CodeSection from "@/components/Organisms/CodeSelection";
+import MiniSidebar from "@/components/Organisms/MiniSidebar";
 
 export default function About() {
      return (

@@ -1,12 +1,13 @@
 import { MessageSquare, Star } from "lucide-react";
-
+import Image from "next/image";
+import avarta from "../../../public/avarta.jpg";
 export default function UserInfo() {
   return (
     <>
     <div className="w-full flex items-center justify-between px-4 py-4 text-sm text-white/50 font-mono">
       <div className="flex items-center gap-2">
-        <img
-          src="avarta.jpg" // Thay bằng avatar của bạn
+        <Image
+          src={avarta}
           alt="avatar"
           className="w-10 h-10 rounded-full"
         />

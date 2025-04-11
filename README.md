@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thungoc123/Damominee/refs/heads/main/Frontend/my-next-app/public/logo.png" alt="Web3 Portfolio Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/thungoc123/Damominee/refs/heads/main/my-next-app/public/logo.png" alt="Web3 Portfolio Logo" width="200"/>
 </p>
 
 <h1 align="center">🌐 Web3 Portfolio – Fullstack with Next.js & Solidity</h1>

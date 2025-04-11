@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thungoc123/Damominee/refs/heads/main/Frontend/my-next-app/public/logo.png" alt="Web3 Portfolio Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/thungoc123/Damominee/refs/heads/main/my-next-app/public/logo.png" alt="Web3 Portfolio Logo" width="200"/>
 </p>
 
 <h1 align="center">🌐 Web3 Portfolio – Fullstack with Next.js & Solidity</h1>
@@ -25,7 +25,7 @@ This Web3 personal portfolio is divided into three main sections:
 - 👔 **For Businesses**: Explore my featured projects, development process, and technical skills.
 - 💖 **For Fans**: A showcase of creative works (UI/UX, digital art, side products).
 - 📚 **Tech Blog**: Curated knowledge from beginner to advanced, latest tech trends, and selected articles that expand perspective.
-
+- 🙋‍♂️ **For Customers**: Get to know me better — who I am, what I can build, and how I can turn your ideas into real, user-friendly digital experiences.
 ---
 
 ## 👤 About Myself
@@ -64,7 +64,7 @@ From now on, I want every piece of work I produce — whether it's a project, a 
 ## 3. Frontend Development with Next.js:
 - [ ] **Create pages for "For Businesses", "For Fans", "Tech Blog"**.
 - [ ] **Optimize SEO for the pages**.
-- [ ] **Develop UI components** (e.g., sign-up buttons, contact forms, blog post listings, project showcases).
+- [x] **Develop UI components** (e.g., sign-up buttons, contact forms, blog post listings, project showcases).
 - [ ] **Integrate Web3 functionalities** (e.g., MetaMask login, smart contract interactions).
 
 ## 4. Blog Integration:
@@ -86,7 +86,7 @@ From now on, I want every piece of work I produce — whether it's a project, a 
 - [ ] **Ensure secure code handling for Web3 transactions**.
 - [ ] **Test and apply security patches** as needed.
 ## 8. Other ideas:
-- [ ] **Book i read**.
+- [ ] **Book i read**. -- Oh Shit, i forgot 1:26 am 12.4.2025
 ---
 ## 📦 Local Setup
 

@@ -29,7 +29,7 @@ export default function RootLayout({
           <GradientBackground />
           <Header />
           {/* Nội dung chính */}
-          <main className="relative z-10 flex-1 flex flex-col w-full">
+          <main className="relative z-10 flex-1 flex flex-col flex-grow">
             <div className="flex-1 w-full h-screen">{children}</div>
           </main>
           <FooterBackground />

@@ -4,7 +4,7 @@
 export default function CodeEditorUI() {
   return (
     <div className="flex h-[500px] bg-gray-900 rounded-lg shadow-xl border border-gray-800">
-      <div className="w-full max-w-2xl h-full bg-[#1e2227]">
+      <div className="flex-grow max-w-2xl h-full bg-[#1e2227]">
         {/* Editor top bar with dots */}  
         <div className="h-8 bg-[#1e2227] flex items-center px-3 border-b border-gray-800">
           <div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div>

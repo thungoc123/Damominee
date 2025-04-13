@@ -1,11 +1,11 @@
-import { FaBrain, FaGlobeAmericas, FaGuitar, FaMicrophoneAlt, FaCrosshairs, FaLanguage, FaBook, FaRunning, FaCoffee } from 'react-icons/fa';
+import { FaBrain, FaGlobeAmericas, FaGuitar, FaMicrophoneAlt, FaLanguage, FaBook, FaRunning } from 'react-icons/fa';
 import { SiRiotgames } from 'react-icons/si';
 import { GiPianoKeys } from 'react-icons/gi';
 import { FaCameraRetro, FaVideo } from 'react-icons/fa';
 
 export default function InterestSection() {
   return (
-    <div className="w-full md:w-1/2 p-6 text-gray-500 bg-gray-800 border-r border-gray-700">
+    <div className="w-full md:flex-grow p-6 text-gray-500 bg-gray-800 border-r border-gray-700">
       <div className="flex items-center mb-4">
         <p>1</p>
         <p className="text-green-400 ml-4">/**</p>
@@ -93,7 +93,10 @@ export default function InterestSection() {
             <span>Video editing</span>
           </p>
         </div>
-
+        <div className="flex items-center mb-4">
+          <p>*</p>
+          
+        </div>
       </div>
       <p className="text-green-400">*/</p>
     </div>

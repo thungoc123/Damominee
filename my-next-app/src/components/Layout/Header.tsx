@@ -28,6 +28,9 @@ export default function Header() {
         <Link href="/projects" className={getLinkClass("/projects")}>
           _projects
         </Link>
+        <Link href="/blog" className={getLinkClass("/blog")}>
+          _blog
+        </Link>
       </div>
       <a
         href="mailto:nguyenthunngoc@gmail.com"

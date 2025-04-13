@@ -63,7 +63,15 @@ export default function Sidebar() {
               <SidebarLink
                 href="/about/education"
                 icon={FaFolder}
-                label="books & courses"
+                label="books & certificates"
+                iconColor="text-blue-500"
+              />
+            </li>
+            <li>
+              <SidebarLink
+                href="/about/languages"
+                icon={FaFolder}
+                label="languages"
                 iconColor="text-blue-500"
               />
             </li>

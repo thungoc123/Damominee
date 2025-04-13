@@ -1,45 +1,60 @@
-
-export default function CodeSection() {
-  // Function to split text into lines and handle wrapping
-  const processLines = () => {
-    const codeLines = [
-      { number: 1, content: <p className="text-green-400">/**</p> },
-      { number: 2, content: <p className="text-blue-400">* About Damominee</p> },
-      { number: 3, content: <p className="text-blue-400">* My fullname is Nguyễn Thị Ngọc Thư</p> },
-      { number: 4, content: <p className="text-blue-400">* I am 22 years old</p> },
-      { number: 5, content: <p className="text-green-400">* Welcome to my <span className="text-teal-400">portfolio</span>.</p> },
-      { number: 6, content: <p><span className="text-red-400">&#91;Degree&#93;</span> Bachelor's in <i>"Software Engineering"</i></p> },
-      { number: 7, content: <p>from FPT University.</p> },
-      { number: 8, content: <p>* expected graduation in December 2025.</p> },
-      { number: 9, content: <p><span className="text-red-400">&#91;Programming&#93;</span> I started exploring and</p> },
-      { number: 10, content: <p>self-learning programming</p> },
-      { number: 11, content: <p>back in 2020 out of curiosity and passion.</p> },
-      { number: 12, content: <p>* I have experience in HTML, CSS, JavaScript</p> },
-      { number: 13, content: <p> ReactJS, NodeJS, ExpressJS, MongoDB, so on ...</p> },
-      { number: 14, content: <p><span className="text-blue-400">&#91;Whoisdamominee&#93;</span> I'm a very curious person,</p> },
-      { number: 15, content: <p>challenges, I always try to find solutions.</p> },
-      { number: 16, content: <p className="text-green-400">*/</p> }
-    ];
-    
-    return codeLines;
-  };
-
-  const lines = processLines();
-
+export default function IntroduceSection() {
   return (
     <div className="w-full md:w-1/2 p-6 text-gray-500 bg-gray-800 border-r border-gray-700">
-      <div className="code-section pr-16">
-        {lines.map((line) => (
-          <div key={line.number} className="flex">
-            <div className="text-gray-500 w-6 flex-shrink-0 text-right mr-4">
-              {line.number}
-            </div>
-            <div className="flex-grow">
-              {line.content}
-            </div>
-          </div>
-        ))}
+     <div className="flex items-center mb-4">
+       <p>1</p>
+     <p className="text-green-400 ml-4">/**</p>
+
+     </div>
+      <div className="">
+       <div className="flex items-center mb-4">
+         <p>2</p>
+       <p className="text-blue-400 ml-4">* About Damominee</p>
+
+       </div>
+       <div className="flex items-center mb-4">
+         <p>3</p>
+         <p className="text-blue-400 ml-4">* My fullname is Nguyễn Thị Ngọc Thư</p>
+       </div>
+       <div className="flex items-center mb-4">
+         <p>4</p>
+         <p className="text-blue-400 ml-4">* I am 22 years old</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>5</p>
+         <p className="text-green-400 ml-4">* Welcome to my <span className="text-teal-400">portfolio</span>.</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>6</p>
+         <p><span className="text-red-400 ml-4">[Degree]</span> Bachelor's in <i>"Software Engineering"</i>.</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>7</p>
+         <p  className="ml-4"> * expected graduation in December 2025.
+         </p>          </div>
+       <div className="flex items-center mb-4">
+         <p>8</p>
+         <p><span className="text-red-400 ml-4">[Programming]</span> I started exploring and self-learning programming</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>9</p>
+         <p className="ml-4">back in 2020 out of curiosity and passion.</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>10</p>
+         <p className="ml-4"> * I have experience in HTML, CSS, JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB, so on ...</p>
+       </div>
+       <div className="flex items-center mb-4">
+         <p>11</p>
+         <p className="ml-4"><span className="text-blue-400">[Whoisdamominee]</span> I'm a very curious person,</p>
+         </div>
+       <div className="flex items-center mb-4">
+         <p>12</p>
+         <p className="ml-4">challenges, I always try to find solutions.</p>
+         </div>
+      
       </div>
+      <p className="text-green-400">*/</p>
     </div>
   );
 }

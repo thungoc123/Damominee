@@ -35,46 +35,42 @@ export default function Sidebar() {
       {!isProjectPage ? (
         <div>
           <ul className="ml-4 mt-1 space-y-2 mb-6">
-            <li>
               <SidebarLink
                 href="/about"
                 icon={FaFolder}
                 label="bio"
                 iconColor="text-orange-400"
               />
-            </li>
-            <li>
               <SidebarLink
                 href="/about/interest"
                 icon={FaFolder}
                 label="interests"
                 iconColor="text-green-700"
               />
-            </li>
-            <li>
               <SidebarLink
                 href="/about/education"
                 icon={FaFolder}
                 label="education"
                 iconColor="text-orange-500"
               />
-            </li>
-            <li>
               <SidebarLink
-                href="/about/education"
+                href="/about/books"
                 icon={FaFolder}
                 label="books & certificates"
                 iconColor="text-blue-500"
               />
-            </li>
-            <li>
               <SidebarLink
                 href="/about/languages"
                 icon={FaFolder}
                 label="languages"
-                iconColor="text-blue-500"
+                iconColor="text-red-500"
               />
-            </li>
+             <SidebarLink
+                href="/about/experiences"
+                icon={FaFolder}
+                label="experiences"
+                iconColor="text-green-500"
+              />
           </ul>
           <div>
             <p className="text-sm text-white">› contacts</p>

@@ -9,13 +9,11 @@ export default function InterestSection() {
       <div className="flex items-center mb-4">
         <p>1</p>
         <p className="text-green-400 ml-4">/**</p>
-
       </div>
       <div className="">
         <div className="flex items-center mb-4">
           <p>2</p>
           <p className="text-blue-400 ml-4">* About my interest</p>
-
         </div>
         <div className="flex items-center mb-4">
           <p>3</p>
@@ -95,7 +93,6 @@ export default function InterestSection() {
         </div>
         <div className="flex items-center mb-4">
           <p>*</p>
-          
         </div>
       </div>
       <p className="text-green-400">*/</p>

@@ -15,7 +15,7 @@ export default function LanguagesPage() {
                          <Sidebar />
                          <div className="flex-1 flex bg-gray-900 flex-col md:flex-row">
                               <div className="w-[97.5%] bg-gray-800">
-                                   <h3 className="px-4 pt-4">Ilets Goal 7.5</h3>
+                                   <h3 className="px-4 pt-4">Ilets Goal 6.5</h3>
                                   <ContributionGrid />
 
                                   <h3 className="px-4 pt-4">JLPT N3</h3>

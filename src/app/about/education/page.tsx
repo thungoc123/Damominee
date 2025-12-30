@@ -6,10 +6,8 @@ import EducationCard from "@/components/Molecules/EducationCard";
 export default function Education() {
      return (
           <div className="flex min-h-[622px] flex-row bg-none text-gray-200">
-               <div className="w-[4%] min-w-0 overflow-hidden bg-gray-800 border-r border-gray-700 flex flex-col justify-between p-4">
                     <MiniSidebar />
-               </div>
-               <div className="w-[96%]">
+               <div className="w-full">
                     <Breadcrumb />
                     <div className="flex min-h-[586px] flex-col md:flex-row bg-[#0d1117]">
                          <Sidebar />

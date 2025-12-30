@@ -25,7 +25,7 @@ export default function TrendingArticle() {
   return (
     <div className="bg-gray-900 backdrop-blur-md rounded-2xl shadow-lg p-2 border border-white/20">
       <div className="flex justify-between items-center mb-2">
-        <h3 className="font-semibold text-cyan-400">Top Trending Articles</h3>
+        <h3 className="font-semibold text-fuchsia-400">Top Trending Articles</h3>
         <button className="text-yellow-400 text-sm hover:underline flex items-center gap-1">
           See more <ArrowRight size={14} />
         </button>

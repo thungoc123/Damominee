@@ -27,10 +27,10 @@ export default function NotificationModal({
       <div
         onClick={(e) => e.stopPropagation()}
         className="mt-14 w-[90%] max-w-lg bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]
-                   text-white rounded-2xl p-5 shadow-2xl border border-emerald-400 animate-slide-down"
+                   text-white rounded-2xl p-5 shadow-2xl border border-purple-400 animate-slide-down"
       >
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold tracking-wide text-emerald-300">
+          <h2 className="text-2xl font-semibold tracking-wide text-purple-300">
             Activity
           </h2>
           <button
@@ -48,7 +48,7 @@ export default function NotificationModal({
             {notifications.map((note, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-[#111827] border border-emerald-600 px-4 py-3 shadow-md transition hover:scale-[1.01]"
+                className="rounded-xl bg-[#111827] border border-purple-600 px-4 py-3 shadow-md transition hover:scale-[1.01]"
               >
                 <div className="flex items-center gap-3 mb-2">
                   <img

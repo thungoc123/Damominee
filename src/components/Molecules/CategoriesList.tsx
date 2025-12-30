@@ -16,7 +16,7 @@ export default function CategoryTabs() {
         {[...categories, ...categories].map((category, index) => (
           <button
             key={index}
-className="whitespace-nowrap rounded-full px-4 py-1 text-sm font-mono shrink-0 bg-black text-cyan-400 border border-cyan-400/30"
+className="whitespace-nowrap rounded-full px-4 py-1 text-sm font-mono shrink-0 bg-black text-fuchsia-400 border border-fuchsia-400/30"
           >
             {category}
           </button>

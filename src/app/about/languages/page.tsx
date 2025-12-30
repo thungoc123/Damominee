@@ -5,13 +5,11 @@ import ContributionGrid from "@/components/Organisms/ContributionGrid";
 
 export default function LanguagesPage() {
      return (
-          <div className="flex min-h-[622px] flex-row bg-none text-gray-200">
-               <div className="w-[4%] min-w-0 overflow-hidden bg-gray-800 border-r border-gray-700 flex flex-col justify-between p-4">
+          <div className="flex flex-row bg-none text-gray-200">
                     <MiniSidebar />
-               </div>
-               <div className="w-[96%]">
+               <div className="w-full">
                     <Breadcrumb />
-                    <div className="flex min-h-[586px] flex-col md:flex-row bg-[#0d1117]">
+                    <div className="flex min-h-[590px] flex-col md:flex-row bg-[#0d1117]">
                          <Sidebar />
                          <div className="flex-1 flex bg-gray-900 flex-col md:flex-row">
                               <div className="w-[97.5%] bg-gray-800">

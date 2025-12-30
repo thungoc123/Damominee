@@ -58,10 +58,10 @@ export default function ContributionGrid() {
     "w-4 h-4 rounded-sm cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 shadow-sm",
     {
       "bg-gray-700 hover:ring-1 hover:ring-zinc-500": level === 0,
-      "bg-green-200 shadow-green-200/30": level === 1,
-      "bg-green-400 shadow-green-400/30": level === 2,
-      "bg-green-600 shadow-green-600/40": level === 3,
-      "bg-green-800 shadow-green-800/50": level === 4,
+      "bg-pink-200 shadow-pink-200/30": level === 1,
+      "bg-pink-400 shadow-pink-400/30": level === 2,
+      "bg-pink-600 shadow-pink-600/40": level === 3,
+      "bg-pink-800 shadow-pink-800/50": level === 4,
     }
   )}
 />

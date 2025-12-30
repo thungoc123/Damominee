@@ -1,9 +1,11 @@
 import Breadcrumb from "@/components/Atoms/Breadcrumb";
 import Sidebar from "@/components/Layout/Sidebar";
+import MiniSidebar from "@/components/Organisms/MiniSidebar";
 import ListProjects from "@/components/Templates/ListProjects";
 export default function Books() {
      return (
           <div className="w-full flex flex-col md:flex-row bg-none text-gray-200">
+               <MiniSidebar />
                <div className="flex flex-1 flex-col h-full">
                     <Breadcrumb />
                     <div className="flex flex-1 flex-col md:flex-row w-full h-full bg-[#0d1117]">

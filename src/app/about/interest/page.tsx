@@ -9,15 +9,13 @@ import Sidebar from "@/components/Layout/Sidebar";
 export default function Interest() {
      return (
           <div className="flex flex-row bg-none text-gray-200">
-               <div className="w-[4%] min-w-0 overflow-hidden bg-gray-800 border-r border-gray-700 flex flex-col justify-between p-4">
                <MiniSidebar />
-               </div>
-               <div className="w-[96%]"> 
+               <div className="w-full"> 
                     <Breadcrumb />
                     <div className="flex flex-col md:flex-row bg-[#0d1117]">
                          <Sidebar />
                          <div className="flex-1 flex bg-gray-900 flex-col md:flex-row">
-                              <div className="w-[50%]">
+                              <div className="w-[50%] h-full overflow-y-auto border-r border-gray-700">
                               <InterestSection />
                               </div>
                               <div className="w-[2.5%] relative border-l border-r border-t border-white/10 bg-gray-800">

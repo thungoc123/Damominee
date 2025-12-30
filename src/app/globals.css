@@ -28,10 +28,41 @@ body {
 /* global.css hoặc trong module CSS */
 .custom-scroll {
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: auto; /* Firefox */
+  -ms-overflow-style: auto;  /* IE/Edge */
 }
 
 .custom-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #000000; /* Đen */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #86efac; /* Xanh lá cây nhạt */
+  border-radius: 3px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4ade80; /* Xanh lá cây nhạt đậm hơn khi hover */
+}
+
+/* Scrollbar toàn màn hình */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Đen */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #86efac; /* Xanh lá cây nhạt */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4ade80; /* Xanh lá cây nhạt đậm hơn khi hover */
 }

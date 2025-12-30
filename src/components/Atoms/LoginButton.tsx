@@ -1,7 +1,7 @@
 "use client"; // nếu đang dùng Next.js App Router
 
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { FaUserAstronaut, FaBell, FaSignOutAlt, FaHome } from "react-icons/fa";
 import NotificationModal from "../Organisms/NotificationModal";
 
@@ -20,7 +20,6 @@ export default function LoginButton({
 }: LoginButtonProps) {
   const [showOptions, setShowOptions] = useState(false);
   const [showNotificationModal, setShowNotificationModal] = useState(false);
-  const pathname = usePathname();
   const router = useRouter();
 
   const handleClick = () => {
@@ -47,7 +46,6 @@ export default function LoginButton({
   "Romith Afell|1:45 PM|How about our @Esther Howard?",
   "Alex Jhone|2:20 AM|He's the cornerstone of our team, who powers our progress.",
 ];
-  const shouldShowHome = pathname.startsWith("/blog/");
 
   return (
     <div className="relative">
@@ -55,12 +53,12 @@ export default function LoginButton({
        <button
         onClick={handleClick}
         className="p-4 rounded-full transition-all duration-300
-                   bg-[#0f172a] border border-emerald-400
-                   shadow-[inset_0_0_10px_#34d399,0_0_20px_#10b981]
-                   hover:shadow-[inset_0_0_14px_#34d399,0_0_32px_#10b981]"
+                   bg-[#0f172a] border border-purple-400
+                   shadow-[inset_0_0_10px_#8b5cf6,0_0_20px_#a855f7]
+                   hover:shadow-[inset_0_0_14px_#8b5cf6,0_0_32px_#a855f7]"
         title="Tài khoản"
       >
-        <FaUserAstronaut className="text-3xl text-emerald-300 drop-shadow-[0_0_6px_#34d399]" />
+        <FaUserAstronaut className="text-3xl text-purple-300 drop-shadow-[0_0_6px_#8b5cf6]" />
       </button>
 
       {/* Nút phụ nếu đã login */}
@@ -68,8 +66,7 @@ export default function LoginButton({
         <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
 
           {/* Nút Home */}
-          {shouldShowHome && (
-            <button
+          <button
   onClick={handleGoHome}
   className="relative p-4 rounded-full 
              bg-[#111827] border border-indigo-400
@@ -80,8 +77,6 @@ export default function LoginButton({
 >
   <FaHome className="text-indigo-300 text-2xl drop-shadow-[0_0_6px_#6366f1]" />
 </button>
-
-          )}
 
           {/* Nút Thông báo */}
           <button

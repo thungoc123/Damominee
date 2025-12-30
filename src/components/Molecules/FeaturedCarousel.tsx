@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, SetStateAction } from "react";
+import Image from "next/image";
 
 export default function ModernFeaturedSlider() {
   const slides = [
@@ -32,7 +33,7 @@ export default function ModernFeaturedSlider() {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   const goToSlide = (index: SetStateAction<number>) => {
     setCurrent(index);
@@ -57,9 +58,11 @@ export default function ModernFeaturedSlider() {
         {/* Previous slide (small) */}
         <div className="hidden md:block w-1/4 opacity-50 transform scale-75 mr-4">
           <div className={`rounded-lg overflow-hidden shadow-md ${slides[prevIndex].bgColor}`}>
-          <img
+          <Image
               src={slides[prevIndex].img}
               alt="Previous"
+              width={600}
+              height={300}
               className="w-full h-40 object-cover opacity-75"
             />
           </div>
@@ -77,9 +80,11 @@ export default function ModernFeaturedSlider() {
             >
               <div className="rounded-xl overflow-hidden shadow-lg bg-white">
                 <div className="relative">
-                  <img
+                  <Image
                     src={slide.img}
                     alt={slide.title}
+                    width={600}
+                    height={300}
                     className="w-full h-64 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end">
@@ -100,9 +105,11 @@ export default function ModernFeaturedSlider() {
         {/* Next slide (small) */}
         <div className="hidden md:block w-1/4 opacity-50 transform scale-75 ml-4">
           <div className={`rounded-lg overflow-hidden shadow-md ${slides[nextIndex].bgColor}`}>
-            <img
+            <Image
               src={slides[nextIndex].img}
               alt="Next"
+              width={600}
+              height={300}
               className="w-full h-40 object-cover opacity-75"
             />
           </div>

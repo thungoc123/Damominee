@@ -1,7 +1,7 @@
 "use client"; // nếu đang dùng Next.js App Router
 
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { FaUserAstronaut, FaBell, FaSignOutAlt, FaHome } from "react-icons/fa";
 import NotificationModal from "../Organisms/NotificationModal";
 
@@ -20,7 +20,6 @@ export default function LoginButton({
 }: LoginButtonProps) {
   const [showOptions, setShowOptions] = useState(false);
   const [showNotificationModal, setShowNotificationModal] = useState(false);
-  const pathname = usePathname();
   const router = useRouter();
 
   const handleClick = () => {

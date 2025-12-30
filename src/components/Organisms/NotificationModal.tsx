@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 type NotificationModalProps = {
   notifications: string[];
@@ -51,9 +52,11 @@ export default function NotificationModal({
                 className="rounded-xl bg-[#111827] border border-purple-600 px-4 py-3 shadow-md transition hover:scale-[1.01]"
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <img
+                  <Image
                     src={`https://i.pravatar.cc/40?u=${index}`}
                     alt="avatar"
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full"
                   />
                   <div>

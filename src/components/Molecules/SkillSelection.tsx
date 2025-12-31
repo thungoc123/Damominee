@@ -28,7 +28,7 @@ export default function SkillsSection() {
     { name: "React", checked: true, icon: FaReact, techName: "React", description: "I began learning React JS in the early part of my second year at university, and have been using it extensively since 2024 up to the present.", years: "2 years" },
     { name: "Java", checked: true, icon: FaJava, techName: "Java", description: "Java is a compulsory subject at my university. I’m familiar with the language and able to use it with JSP and Servlets.", years: "1 year" },
     { name: "React Native", checked: true, icon: TbBrandReactNative, techName: "React Native", description: "I began learning React Native in December last year. However, I’ve had limited opportunities to truly apply it in real-world projects so far.", years: "4 months" },
-    { name: "Flutter", checked: true, icon: FaFlutter, techName: "Flutter", description: "Flutter has caught my attention recently. I’ve begun learning it and intend to use it in my next project.", years: "0 year" },
+    { name: "Flutter", checked: true, icon: FaFlutter, techName: "Flutter", description: "Flutter has caught my attention recently. I’ve begun learning it and intend to use it in my next project.", years: "6 months" },
     { name: "TypeScript", checked: true, icon: SiTypescript, techName: "TypeScript", description: "I began working with TypeScript in mid-2024 and continue to use it actively to this day.", years: "1 years" },
     { name: "Node", checked: true, icon: FaNodeJs, techName: "Node", description: "No more description", years: "1 year" },
     { name: "SASS", checked: true, icon: FaSass, techName: "SASS", description: "as same as React", years: "1 year" },
@@ -43,7 +43,7 @@ export default function SkillsSection() {
     { name: "Python", icon: FaPython, checked: true, techName: "Python", description: "During my gap year, I served as a programming instructor, primarily teaching Python.", years: "1 years" },
     { name: "Express.Js", icon: SiExpress, checked: true, techName: "Express.Js", description: "I use Express.js in Node.js backends for APIs and full-stack apps.", years: "1 year" },
     { name: "WordPress", icon: FaWordpress, checked: true, techName: "WordPress", description: "During the summer of my first year in college, I began creating websites with WordPress to make some extra cash.", years: "2 year" },
-    { name: "REST API", checked: false, techName: "REST API", description: "I use RESTful APIs across most of my frontend and backend projects for clean data flow.", years: "2 years" },
+    { name: "REST API", checked: true, techName: "REST API", description: "I use RESTful APIs across most of my frontend and backend projects for clean data flow.", years: "2 years" },
     { name: "Laravel", icon: FaLaravel, checked: true, techName: "Laravel", description: "After gaining some experience with PHP, I had a brief period working with Laravel, building small features within about two months.", years: "2 months" },
 
   ]

@@ -40,10 +40,11 @@ export default function Projects() {
                               </div>
 
                               {/* Nội dung chính */}
-                              <div className="flex-grow min-h-[calc(94vh-100px)]  p-6 flex bg-gray-800 flex-col gap-6 overflow-y-auto">
-                                   <section className="w-full">
-                                        <h2 className="text-sm text-gray-500 mb-2">// Showing my list projects</h2>
-                                        <ListProjects projects={projects} />
+                              <div className="flex-grow min-h-[calc(94vh-100px)] flex bg-gray-800 flex-col overflow-y-auto">
+                                   <section className="w-full flex min-h-[calc(94vh-100px)]">
+                                        <div className="w-[50%] bg-gray-700"></div>
+                                        <div className="w-px bg-gray-600"></div>
+                                        <div className="w-[50%] bg-gray-700"></div>
                                    </section>
                               </div>
                               {/* Border phải */}

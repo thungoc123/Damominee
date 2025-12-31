@@ -1,7 +1,6 @@
 'use client'
 import { useRef } from 'react'
 import '@/styles/Iris.css'
-import GradientBackground from '@/components/Templates/GradientBackground'
 
 function ParallaxCard({
   title,
@@ -47,7 +46,6 @@ function ParallaxCard({
 
 export default function Home() {
   return (
-    <GradientBackground>
     <div className="page">
       <div className="card-grid">
         <ParallaxCard
@@ -72,6 +70,5 @@ export default function Home() {
         />
       </div>
     </div>
-    </GradientBackground>
   )
 }

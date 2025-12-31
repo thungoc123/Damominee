@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" className={JetBrainsMono.variable}>
       <body>
         <div className="relative flex flex-col min-h-screen bg-[#0d1117] overflow-hidden">
-          <GradientBackground />
+          <GradientBackground children={undefined} />
          <ClientLayout>{children}</ClientLayout>
           <FooterBackground />
         </div>

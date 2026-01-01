@@ -26,12 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={JetBrainsMono.variable}>
       <body>
-        <div className="relative flex flex-col min-h-screen bg-[#0d1117] overflow-hidden">
-          <GradientBackground children={undefined} />
-         <ClientLayout>{children}</ClientLayout>
+        <div className="relative flex flex-col bg-[#0d1117] overflow-hidden">
+          <GradientBackground 
+          children={<ClientLayout>{children}</ClientLayout>} 
+          
+          />
+         
           <FooterBackground />
         </div>
-      </body>
+      </body> 
     </html>
 
   );

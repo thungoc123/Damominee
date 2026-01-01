@@ -1,51 +1,99 @@
-.flower {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 50vh;
-     margin: 0;
-    
-   }
-   
-   .iris {
-     position: relative;
-     margin: 0 auto;
-     width: 200px;
-     height: 200px;
-   }
-   
-   .petal {
-     position: absolute;
-     width: 60px;
-     height: 120px;
-     transform-origin: bottom center;
-   }
-   
-   @keyframes sway {
-     0%, 100% { transform: rotate(0deg) scaleY(1); }
-     50% { transform: rotate(5deg) scaleY(1.05); }
-   }
-   
+.page {
+  min-height: 85vh;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-/* Cánh được xoay đúng vị trí */
-.petal1 { transform: rotate(0deg) translateY(-60px); }
-.petal2 { transform: rotate(60deg) translateY(-60px); }
-.petal3 { transform: rotate(120deg) translateY(-60px); }
-.petal4 { transform: rotate(180deg) translateY(-60px); }
-.petal5 { transform: rotate(240deg) translateY(-60px); }
-.petal6 { transform: rotate(300deg) translateY(-60px); }
+.card-grid {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  perspective: 1000px;
+}
 
-.petal1 { animation-delay: 0s; }
-.petal2 { animation-delay: 0.2s; }
-.petal3 { animation-delay: 0.4s; }
-.petal4 { animation-delay: 0.6s; }
-.petal5 { animation-delay: 0.8s; }
-.petal6 { animation-delay: 1s; }
-.petal .inner {
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(#6a1b9a, #8e24aa);
-     border-radius: 60% 60% 0 0;
-     animation: sway 3s infinite ease-in-out;
-     transform-origin: bottom center;
-   }
+.skill-card {
+  background: rgba(0, 255, 195, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 195, 0.2);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0, 255, 195, 0.1);
+  transition: transform 3s ease, box-shadow 0.2s ease-out, left 3s ease, top 3s ease;
+  will-change: transform;
+  cursor: pointer;
+  position: absolute;
+}
+
+.skill-card h3 {
+  color: #e6edf3;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  color: #9da7b3;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.skill-card .cta {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 0.75rem;
+  color: #ff7ad9;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.skill-card:hover .cta {
+  opacity: 1;
+}
+
+.content-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 255, 195, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 195, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 600px;
+  color: #e6edf3;
+  text-align: left;
+}
+
+.content-display h2 {
+  color: #e6edf3;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.content-display p {
+  color: #9da7b3;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  text-transform: none;
+}
+
+.close-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffc3;
+  color: #0d1117;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-button:hover {
+  background: #00e6b3;
+}

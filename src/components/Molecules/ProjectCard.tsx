@@ -1,46 +1,76 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-export default function ProjectCard() {
+
+interface ProjectCardProps {
+  title: string;
+  description?: string;
+  viewDetailsLink: string;
+  viewDetailsText?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  progress?: number;
+  author?: string;
+  progressDescription?: string;
+  hideViewButton?: boolean;
+}
+
+export default function ProjectCard({ title, description, viewDetailsLink, viewDetailsText = "Xem chi tiết", imageSrc, imageAlt = "Project image", progress, author, progressDescription, hideViewButton }: ProjectCardProps) {
 
   return (
-    <div className="w-full w-full md:w-[calc(33.333%-16px)] bg-gray-900 text-gray-400 p-4 rounded-lg overflow-hidden">
+    <div className="w-full w-full md:w-[calc(33.333%-16px)] bg-gray-900 text-gray-400 p-4 rounded-lg overflow-hidden min-h-[350px] flex flex-col">
       {/* Project Title */}
       <div className="flex items-center mb-2">
-        <h2 className="text-orange-500 font-mono font-bold">Project 1 </h2>
-        <span className="text-gray-500 font-mono">// </span>
-        <span className="text-teal-400 font-mono ml-2">_justeat-clone</span>
+        <h2 className="text-orange-500 font-mono font-bold">{title} </h2>
+        {/* <span className="text-gray-500 font-mono">// </span> */}
       </div>
 
       {/* Project Preview */}
-      <div className="w-full bg-white rounded-lg overflow-hidden mb-6">
-        {/* Food Image and CTA */}
-        <div className="bg-orange-500 h-40 relative flex items-center justify-center">
-          <div className="flex flex-col items-center">
+      {imageSrc && (
+        <div className="w-full bg-white rounded-lg overflow-hidden mb-6">
+          <div className="w-full h-40 relative">
             <Image
-              src="/next.svg"
-              alt="avatar"
-              width={100}
-              height={100}
+              src={imageSrc}
+              alt={imageAlt}
+              fill
+              className="object-cover"
             />
           </div>
         </div>
-      </div>
+      )}
 
       {/* Project Description */}
-      <div className="mb-8">
-        <p className="text-gray-400 font-mono leading-relaxed">
-          Nel primo progetto durante il corso di DevelHope abbiamo replicato il sito di Just Eat.
-        </p>
-      </div>
+      {description && (
+        <div className={`mb-8 flex-grow ${!imageSrc ? 'mt-4' : ''}`}>
+          <p className="text-gray-400 font-mono leading-relaxed">
+            {description}
+          </p>
+        </div>
+      )}
+
+      {/* Progress Bar */}
+      {progress !== undefined && (
+        <div className="mb-6">
+          {author && <p className="text-sm text-gray-500 mb-2">by {author}</p>}
+          {progressDescription && <p className="text-sm text-gray-400 mb-2">{progressDescription}</p>}
+          <div className="w-full bg-gray-700 rounded-full h-2">
+            <div
+              className="bg-orange-500 h-2 rounded-full transition-all duration-300"
+              style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+            ></div>
+          </div>
+        </div>
+      )}
 
       {/* GitHub Link */}
-      <Link href={`/projects/skinTime`}>
-      <button
-        className="w-full py-3 text-center rounded bg-gray-800 text-teal-400 font-mono hover:bg-teal-600 transition-colors duration-300 cursor-pointer"
-      >
-        view-project-on-github
-      </button></Link>
+      {!hideViewButton && (
+        <Link href={viewDetailsLink}>
+        <button
+          className="w-full py-3 text-center rounded bg-gray-800 text-teal-400 font-mono hover:bg-teal-600 transition-colors duration-300 cursor-pointer"
+        >
+          {viewDetailsText}
+        </button></Link>
+      )}
      
     </div>
   );

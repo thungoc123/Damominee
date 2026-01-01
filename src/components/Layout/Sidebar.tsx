@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaFolder, FaPhoneAlt } from "react-icons/fa";
+import { FaFolder, FaPhoneAlt, FaPalette, FaUsers, FaUser, FaCamera, FaNewspaper } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaSortDown } from "react-icons/fa";
 import SidebarLink from "../Molecules/SidebarLink";
@@ -14,8 +14,24 @@ export default function Sidebar() {
   const isProjectPage = pathname.startsWith("/projects");
   const projectList = [
     {
-      icon: <MdEmail className="w-4 h-4 mr-2 text-teal-300" />,
+      icon: <FaPalette className="w-4 h-4 mr-2 text-teal-300" />,
       text: "_SkinTime",
+    },
+     {
+      icon: <FaUsers className="w-4 h-4 mr-2 text-teal-300" />,
+      text: "_GroupTrip",
+    },
+    {
+      icon: <FaUser className="w-4 h-4 mr-2 text-teal-300" />,
+      text: "_Selfra",
+    },
+    {
+      icon: <FaCamera className="w-4 h-4 mr-2 text-teal-300" />,
+      text: "_HsStudio",
+    },
+    {
+      icon: <FaNewspaper className="w-4 h-4 mr-2 text-teal-300" />,
+      text: "_DamomineeBlog",
     }
   ]
 
@@ -65,12 +81,12 @@ export default function Sidebar() {
                 label="languages"
                 iconColor="text-red-500"
               />
-             <SidebarLink
+             {/* <SidebarLink
                 href="/about/experiences"
                 icon={FaFolder}
                 label="experiences"
                 iconColor="text-green-500"
-              />
+              /> */}
           </ul>
           <div>
             <p className="text-sm text-white">› contacts</p>
@@ -104,7 +120,7 @@ export default function Sidebar() {
                 {projectList.map((item, index) => (
                   <SidebarLink
                     href="/projects"
-                    icon={FaFolder}
+                    icon={() => item.icon}
                     label={item.text}
                     key={index}
                     iconColor="text-teal-300"

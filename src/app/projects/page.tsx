@@ -1,38 +1,15 @@
 import Breadcrumb from "@/components/Atoms/Breadcrumb";
-import Sidebar from "@/components/Layout/Sidebar";
-import ListProjects from "@/components/Templates/ListProjects";
+import { projects } from "@/constants/projects";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
-     const projects = [
-          {
-               title: "Project 1",
-               description: "Description for project 1",
-               viewDetailsLink: "/projects/project1",
-               imageSrc: "/next.svg",
-               progress: 75
-          },
-          {
-               title: "Project 2", 
-               description: "Description for project 2",
-               viewDetailsLink: "/projects/project2",
-               imageSrc: "/next.svg",
-               progress: 50
-          },
-          {
-               title: "Project 3",
-               description: "Description for project 3", 
-               viewDetailsLink: "/projects/project3",
-               imageSrc: "/next.svg",
-               progress: 90
-          }
-     ];
-
      return (
           <div className="w-full flex flex-col md:flex-row bg-none text-gray-200">
                <div className="flex flex-1 flex-col h-full">
                     <Breadcrumb />
                     <div className="flex flex-1 flex-col md:flex-row w-full h-full bg-[#0d1117]">
-                         <Sidebar />
+                         {/* <Sidebar /> */}
                          <div className="flex-1 flex bg-gray-900 flex-col md:flex-row h-full">
                               {/* Border trái */}
                               <div className="w-[20px] relative border-l border-r border-t border-white/10 bg-gray-800">
@@ -40,12 +17,18 @@ export default function Projects() {
                               </div>
 
                               {/* Nội dung chính */}
-                              <div className="flex-grow min-h-[calc(94vh-100px)] flex bg-gray-800 flex-col overflow-y-auto">
-                                   <section className="w-full flex min-h-[calc(94vh-100px)]">
-                                        <div className="w-[50%] bg-gray-700"></div>
-                                        <div className="w-px bg-gray-600"></div>
-                                        <div className="w-[50%] bg-gray-700"></div>
-                                   </section>
+                              <div className="flex-grow min-h-[calc(94vh-100px)] flex bg-gray-800 flex-col overflow-y-auto p-6">
+                                   <h2 className="text-xl text-white mb-4">// Projects</h2>
+                                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        {projects.map((project) => (
+                                             <Link key={project.slug} href={`/projects/${project.slug}`}>
+                                                  <div className="bg-gray-700 p-4 rounded-md hover:bg-gray-600 transition-colors">
+                                                      
+                                                       <h3 className="text-teal-300 text-lg font-mono">{project.name}</h3>
+                                                  </div>
+                                             </Link>
+                                        ))}
+                                   </div>
                               </div>
                               {/* Border phải */}
                               <div className="w-[20px] relative border-l border-r border-t border-white/10 bg-gray-800">

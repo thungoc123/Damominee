@@ -7,7 +7,7 @@ interface ProjectCardProps {
   description?: string;
   viewDetailsLink: string;
   viewDetailsText?: string;
-  imageSrc?: string;
+  imageSrc?: string ;
   imageAlt?: string;
   progress?: number;
   author?: string;
@@ -16,6 +16,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, description, viewDetailsLink, viewDetailsText = "Xem chi tiết", imageSrc, imageAlt = "Project image", progress, author, progressDescription, hideViewButton }: ProjectCardProps) {
+  const imageUrl = Array.isArray(imageSrc) ? imageSrc[0] : imageSrc;
 
   return (
     <div className="w-full w-full md:w-[calc(33.333%-16px)] bg-gray-900 text-gray-400 p-4 rounded-lg overflow-hidden min-h-[350px] flex flex-col">
@@ -30,7 +31,7 @@ export default function ProjectCard({ title, description, viewDetailsLink, viewD
         <div className="w-full bg-white rounded-lg overflow-hidden mb-6">
           <div className="w-full h-40 relative">
             <Image
-              src={imageSrc}
+              src={imageUrl}
               alt={imageAlt}
               fill
               className="object-cover"

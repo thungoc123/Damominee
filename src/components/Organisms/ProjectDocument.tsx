@@ -1,74 +1,139 @@
 import React from 'react';
 
-const ProjectDocumentation = () => {
+interface ProjectDocumentProps {
+  name: string;
+  description: string;
+  responsibilities: string;
+  AccountTest?: {
+    role: string;
+    username: string;
+    password: string;
+  }[];
+}
+
+const ProjectDocumentation: React.FC<ProjectDocumentProps> = ({ name, description, responsibilities, AccountTest }) => {
+  const splitIntoLines = (text: string, wordsPerLine: number = 6): string[] => {
+    const words = text.split(' ');
+    const lines: string[] = [];
+    for (let i = 0; i < words.length; i += wordsPerLine) {
+      lines.push(words.slice(i, i + wordsPerLine).join(' '));
+    }
+    return lines;
+  };
+
+  const descriptionLines = splitIntoLines(description);
+  const responsibilityLines = splitIntoLines(responsibilities);
+
+  const renderLines = () => {
+    const lines = [];
+    let lineNumber = 1;
+
+    // Line 1: /**
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span className="text-pink-400">/**</span>
+      </div>
+    );
+    lineNumber++;
+
+    // Line 2: * Project // {name}
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span><span className="text-pink-400">*</span> <span className="text-blue-400">Project //</span> <span className="text-pink-400">{name}</span></span>
+      </div>
+    );
+    lineNumber++;
+
+    // Description lines
+    descriptionLines.forEach((line) => {
+      lines.push(
+        <div key={lineNumber} className="flex">
+          <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+          <span><span className="text-pink-400">*</span> <span className="text-purple-400">{line}</span></span>
+        </div>
+      );
+      lineNumber++;
+    });
+
+    // Empty line
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span><span className="text-pink-400">*</span></span>
+      </div>
+    );
+    lineNumber++;
+
+    // Responsibility header
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span><span className="text-pink-400">*</span> <span className="text-green-400">My Responsibility:</span></span>
+      </div>
+    );
+    lineNumber++;
+
+    // Responsibility lines
+    responsibilityLines.forEach((line) => {
+      lines.push(
+        <div key={lineNumber} className="flex">
+          <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+          <span><span className="text-pink-400">*</span> <span className="text-yellow-400">{line}</span></span>
+        </div>
+      );
+      lineNumber++;
+    });
+
+    // Empty line
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span><span className="text-pink-400">*</span></span>
+      </div>
+    );
+    lineNumber++;
+
+    // Closing */
+    lines.push(
+      <div key={lineNumber} className="flex">
+        <span className="text-gray-500 w-8 text-right pr-4">{lineNumber}</span>
+        <span><span className="text-pink-400">*/</span></span>
+      </div>
+    );
+
+    return lines;
+  };
+
   return (
     <div className="flex-1 text-gray-300 p-6 rounded-md font-mono">
       <div className="flex flex-col">
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">1</span>
-          <span className="text-pink-400">/**</span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">2</span>
-          <span><span className="text-pink-400">*</span> <span className="text-blue-400">Progetto 1 //</span> <span className="text-pink-400">justEat-clone</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">3</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">Come primo progetto del corso abbiamo realizzato</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">4</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">un clone del sito di Just Eat.</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">5</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">Le pagine che abbiamo replicato sono:</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">6</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">l'home e la pagina che elenca i ristoranti</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">7</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">in un'area definita.</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">8</span>
-          <span><span className="text-pink-400">*</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">9</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">In questo primo progetto abbiamo usato solamente</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">10</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">HTML e CSS mentre per coordinare il lavoro in team</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">11</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">abbiamo usato : Trello, GitHub, Discord, Notion</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">12</span>
-          <span><span className="text-pink-400">*</span> <span className="text-purple-400">e la metodologia Agile.</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">13</span>
-          <span><span className="text-pink-400">*</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">14</span>
-          <span><span className="text-pink-400">*/</span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">15</span>
-          <span></span>
-        </div>
-        <div className="flex">
-          <span className="text-gray-500 w-8 text-right pr-4">16</span>
-          <span></span>
-        </div>
+        {renderLines()}
       </div>
+      {AccountTest && (
+        <div className="flex flex-col items-center mt-4">
+          <h1 className="text-gray-300 mb-2">Account Test</h1>
+          <table className="border border-gray-500 text-gray-500">
+            <thead>
+              <tr>
+                <th className="border border-gray-500 p-2">Role</th>
+                <th className="border border-gray-500 p-2">Username</th>
+                <th className="border border-gray-500 p-2">Password</th>
+              </tr>
+            </thead>
+            <tbody>
+              {AccountTest.map((account, index) => (
+                <tr key={index}>
+                  <td className="border border-gray-500 p-2">{account.role}</td>
+                  <td className="border border-gray-500 p-2">{account.username}</td>
+                  <td className="border border-gray-500 p-2">{account.password}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

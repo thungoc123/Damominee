@@ -16,7 +16,7 @@ export default function Breadcrumb() {
       <span className="font-mono text-gray-500">{pathSegments}</span>
       </div>
       <div className="flex items-center space-x-1 w-[490px] border-r py-2 border-white/10">
-        <span className="font-mono text-gray-500">...</span>
+        {/* <span className="font-mono text-gray-500">...</span> */}
         </div>
     </div>
   );

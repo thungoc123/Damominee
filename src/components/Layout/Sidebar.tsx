@@ -4,36 +4,23 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaFolder, FaPhoneAlt, FaPalette, FaUsers, FaUser, FaCamera, FaNewspaper } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaSortDown } from "react-icons/fa";
 import SidebarLink from "../Molecules/SidebarLink";
+import { projects } from "@/constants/projects";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const isProjectPage = pathname.startsWith("/projects");
-  const projectList = [
-    {
-      icon: <FaPalette className="w-4 h-4 mr-2 text-teal-300" />,
-      text: "_SkinTime",
-    },
-     {
-      icon: <FaUsers className="w-4 h-4 mr-2 text-teal-300" />,
-      text: "_GroupTrip",
-    },
-    {
-      icon: <FaUser className="w-4 h-4 mr-2 text-teal-300" />,
-      text: "_Selfra",
-    },
-    {
-      icon: <FaCamera className="w-4 h-4 mr-2 text-teal-300" />,
-      text: "_HsStudio",
-    },
-    {
-      icon: <FaNewspaper className="w-4 h-4 mr-2 text-teal-300" />,
-      text: "_DamomineeBlog",
-    }
-  ]
+
+  const projectList = projects.map(project => ({
+    icon: project.icon === "FaPalette" ? <FaPalette className="w-4 h-4 mr-2 text-teal-300" /> :
+          project.icon === "FaUsers" ? <FaUsers className="w-4 h-4 mr-2 text-teal-300" /> :
+          project.icon === "FaUser" ? <FaUser className="w-4 h-4 mr-2 text-teal-300" /> :
+          project.icon === "FaCamera" ? <FaCamera className="w-4 h-4 mr-2 text-teal-300" /> :
+          <FaNewspaper className="w-4 h-4 mr-2 text-teal-300" />,
+    text: `_${project.name}`,
+    slug: project.slug,
+  }));
 
   const contacts = [
     {
@@ -107,19 +94,19 @@ export default function Sidebar() {
 
           <ul className="ml-4 mt-1 space-y-1 mb-6">
             <li>
-              <div
+              {/* <div
                 className="flex items-center cursor-pointer select-none"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <FaSortDown
                   className="w-4 h-4 mr-2 text-white" />
                 <span>Projects</span>
-              </div>
+              </div> */}
 
               <ul className="mt-1 space-y-1 transition-all duration-300 ease-in-out">
                 {projectList.map((item, index) => (
                   <SidebarLink
-                    href="/projects"
+                    href={`/projects/${item.slug}`}
                     icon={() => item.icon}
                     label={item.text}
                     key={index}
